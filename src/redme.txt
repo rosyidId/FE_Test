@@ -1,0 +1,11 @@
+<tr>
+                                  <td
+                                    colSpan={8}
+                                    className="px-6 py-4 text-gray-600 bg-gray-100"
+                                  >
+                                    <div className="px-12 py-6">
+                                      <h2 className="font-semibold text-sm">Belum ada lokasi</h2>
+                                      <p>Silahkan pilih dan tambahkan lokasi dengan menekan “+ Lokasi” terlebih dahulu untuk memindahkan barang</p>
+                                    </div>
+                                  </td>
+                                </tr>
