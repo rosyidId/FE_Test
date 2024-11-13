@@ -4,7 +4,7 @@ import useLogin from '../hooks/useLogin';
 import useCurrentUser from '../hooks/useCurrentUser';
 
 interface UserProfileDropdownProps {
-  username: string;
+  username: string | undefined;
   imageUrl: string;
 }
 
@@ -60,7 +60,6 @@ const Dropdown: React.FC<UserProfileDropdownProps> = ({ username, imageUrl }) =>
             <p className="font-semibold text-gray-800">Profile</p>
           </div>
           <div className="px-4 py-2 text-gray-600">
-            {/* <p>{user?.username}</p> */}
             <p className='text-xs whitespace-normal break-words'>{user?.email}</p>
           </div>
           <div className="flex justify-between px-4 py-2 text-gray-600">

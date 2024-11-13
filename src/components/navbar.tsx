@@ -16,7 +16,7 @@ export default function Navbar() {
             </div>
             <IconBell className="stroke-1" size={20} />
           </div>
-          <Dropdown username={`${user?.username}`} imageUrl="https://dummyjson.com/icon/emilys/128" />
+          <Dropdown username={user?.username} imageUrl="https://dummyjson.com/icon/emilys/128" />
         </div>
       </div>
     </div>
