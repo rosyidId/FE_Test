@@ -1,7 +1,8 @@
 import { IconBell } from "@tabler/icons-react";
 import Dropdown from './dropdown'; 
+import useCurrentUser from "../hooks/useCurrentUser";
 export default function Navbar() {
-
+  const {user} = useCurrentUser();
   return (
     <div className="px-4 py-2 flex bg-white justify-between items-center border-b">
       <div>
@@ -15,7 +16,7 @@ export default function Navbar() {
             </div>
             <IconBell className="stroke-1" size={20} />
           </div>
-          <Dropdown username="User" imageUrl="https://dummyjson.com/icon/emilys/128" />
+          <Dropdown username={`${user?.username}`} imageUrl="https://dummyjson.com/icon/emilys/128" />
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import ModalLogout from './modal/modal-logout';
 import useLogin from '../hooks/useLogin';
+import useCurrentUser from '../hooks/useCurrentUser';
 
 interface UserProfileDropdownProps {
   username: string;
@@ -11,6 +12,8 @@ const Dropdown: React.FC<UserProfileDropdownProps> = ({ username, imageUrl }) =>
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null); 
   const {logout} = useLogin();
+  const {user} = useCurrentUser();
+  
 
   const toggleDropdown = () => {
     setIsOpen(prev => !prev);
@@ -57,11 +60,11 @@ const Dropdown: React.FC<UserProfileDropdownProps> = ({ username, imageUrl }) =>
             <p className="font-semibold text-gray-800">Profile</p>
           </div>
           <div className="px-4 py-2 text-gray-600">
-            <p>Name: {username}</p>
-            <p>Email: user@example.com</p>
+            {/* <p>{user?.username}</p> */}
+            <p className='text-xs whitespace-normal break-words'>{user?.email}</p>
           </div>
           <div className="flex justify-between px-4 py-2 text-gray-600">
-            <button className="text-sm text-blue-500">Settings</button>
+            <button onClick={() => alert('sorry halaman belum tersedia!!')} className="text-sm text-blue-500">Settings</button>
             <button onClick={() => setIsModalOpen(true)} className="text-sm text-red-500">Logout</button>
           </div>
         </div>
