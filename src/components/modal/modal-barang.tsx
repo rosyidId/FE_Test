@@ -27,8 +27,8 @@ const ModalTambahBarang: React.FC<ModalTambahBarangProps> = ({ isOpen, onClose, 
   };
   const isSelected = selectedItems.length > 0; 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-      <div className="bg-white p-3 w-[160vh]">
+    <div className="fixed inset-0 flex items-center overflow-y-auto justify-center z-50 bg-black bg-opacity-50">
+      <div className="bg-white p-3 md:w-[160vh] w-[60vh]">
         <div className="border-b p-2 text-sm flex justify-between">
           <h1>Tambah Barang</h1>
           <button onClick={onClose}>

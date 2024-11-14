@@ -7,19 +7,19 @@ const Pagination = () => {
         <button className="border ">
           <IconChevronLeft className="text-[#D9D9D9]" />
         </button>
-        <button className="border text-sm p-0.5  w-7">1</button>
-        <div className="text-[#D9D9D9] w-8 text-center text-[14px] flex justify-center items-center">
+        <button className="border text-sm p-0.5  w-7 hidden md:block">1</button>
+        <div className="text-[#D9D9D9] hidden md:flex w-8 text-center text-[14px]  justify-center items-center">
           • • •
         </div>
-        <button className="border text-sm p-0.5  w-7">4</button>
-        <button className="border text-sm p-0.5  w-7">5</button>
-        <button className="border text-sm p-0.5  w-7">6</button>
-        <button className="border text-sm p-0.5  w-7">7</button>
-        <button className="border text-sm p-0.5  w-7">8</button>
-        <div className="text-[#D9D9D9] w-8 text-center text-[14px] flex justify-center items-center">
+        <button className="border text-sm p-0.5  w-7 hidden md:block">4</button>
+        <button className="border text-sm p-0.5  w-7 hidden md:block">5</button>
+        <button className="border text-sm p-0.5  w-7 hidden md:block">6</button>
+        <button className="border text-sm p-0.5  w-7 hidden md:block">7</button>
+        <button className="border text-sm p-0.5  w-7 hidden md:block">8</button>
+        <div className="text-[#D9D9D9] hidden md:flex w-8 text-center text-[14px] justify-center items-center">
           • • •
         </div>
-        <button className="border text-sm p-0.5  w-7">50</button>
+        <button className="border text-sm p-0.5  w-7 hidden md:block">50</button>
         <button className="border ">
           <IconChevronRight className="text-[#D9D9D9]" />
         </button>

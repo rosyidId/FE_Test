@@ -7,7 +7,7 @@ const BarangKosong = ({openModal}: BarangKosongProps) => {
       <div className="bg-[#D9D9D9] border h-40 mt-2">
         <div className="flex-col flex items-center h-full justify-center">
           <h2 className="text-sm">Belum ada barang</h2>
-          <span className="text-xs text-[#9CA3AF]">
+          <span className="text-xs text-center text-[#9CA3AF]">
             Silahkan tambah barang terlebih dahulu untuk mulai memindahkan
           </span>
           <button

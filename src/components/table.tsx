@@ -48,22 +48,22 @@ const Table: React.FC<TableProps> = ({ setDataBarang }) => {
                 className="h-4 w-4 cursor-pointer"
               />
             </th>
-            <th scope="col" className="px-6 py-3 border-r">
+            <th scope="col" className="md:px-6 px-3 md:py-3 py-0.5 border-r whitespace-nowrap">
               Kode Barang
             </th>
-            <th scope="col" className="px-6 py-3 border-r">
+            <th scope="col" className="md:px-6 px-3 md:py-3 py-0.5 border-r whitespace-nowrap">
               Nama Barang
             </th>
-            <th scope="col" className="px-6 py-3 border-r">
+            <th scope="col" className="md:px-6 px-3 md:py-3 py-0.5 border-r whitespace-nowrap">
               Merk
             </th>
-            <th scope="col" className="px-6 py-3 border-r">
+            <th scope="col" className="md:px-6 px-3 md:py-3 py-0.5 border-r whitespace-nowrap">
               Jenis Barang
             </th>
-            <th scope="col" className="px-6 py-3 border-r">
+            <th scope="col" className="md:px-6 px-3 md:py-3 py-0.5 border-r whitespace-nowrap">
               Gudang
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="md:px-6 px-3 md:py-3 py-0.5 white whitespace-nowrap">
               Total Stock (pcs)
             </th>
           </tr>
@@ -71,7 +71,7 @@ const Table: React.FC<TableProps> = ({ setDataBarang }) => {
         <tbody className="text-xs">
           {dataBarang.map((barang, index) => (
             <tr
-              key={barang.kode_barang}
+              key={index}
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
             >
               <td className="px-3 py-2.5 ">
@@ -88,11 +88,11 @@ const Table: React.FC<TableProps> = ({ setDataBarang }) => {
               >
                 {barang.kode_barang}
               </th>
-              <td className="px-6 py-2.5">{barang.nama_barang}</td>
-              <td className="px-6 py-2.5">{barang.merk}</td>
-              <td className="px-6 py-2.5">{barang.jenis_barang}</td>
-              <td className="px-6 py-2.5">{barang.gudang}</td>
-              <td className="px-6 py-2.5">{barang.total_stok}</td>
+              <td className="md:px-6 px-3 py-0.5 md:py-2.5 whitespace-nowrap">{barang.nama_barang}</td>
+              <td className="md:px-6 px-3 py-0.5 md:py-2.5 whitespace-nowrap">{barang.merk}</td>
+              <td className="md:px-6 px-3 py-0.5 md:py-2.5 whitespace-nowrap">{barang.jenis_barang}</td>
+              <td className="md:px-6 px-3 py-0.5 md:py-2.5 whitespace-nowrap">{barang.gudang}</td>
+              <td className="md:px-6 px-3 py-0.5 md:py-2.5 whitespace-nowrap">{barang.total_stok}</td>
             </tr>
           ))}
         </tbody>

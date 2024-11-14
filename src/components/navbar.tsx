@@ -6,7 +6,8 @@ export default function Navbar() {
   return (
     <div className="px-4 py-2 flex bg-white justify-between items-center border-b">
       <div>
-        <h1 className="font-semibold">Warehouse Management System</h1>
+        <h1 className="font-semibold hidden md:block">Warehouse Management System</h1>
+        <h1 className="font-semibold md:hidden">Warehouse</h1>
       </div>
       <div>
         <div className="flex gap-4 items-center">

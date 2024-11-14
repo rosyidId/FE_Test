@@ -88,12 +88,12 @@ function App() {
           <div className="bg-white ">
             <div className="border-b px-3 py-2 text-sm">Buat Task Baru</div>
             <div className="px-3 py-4">
-              <div className="flex gap-6 items-center">
-                <div>
+              <div className="md:flex gap-6 items-center">
+                <div className="mb-2 md:mb-0">
                   <h2 className="font-normal text-xs">Task No</h2>
                   <input
                     type="text"
-                    className="bg-[#F5F5F5] w-56 border mt-1 text-sm px-2 py-1"
+                    className="bg-[#F5F5F5] md:w-56 w-full border mt-1 text-sm px-2 py-1"
                     disabled
                     value={"SM-PB-001/24/2024"}
                   />
@@ -103,7 +103,7 @@ function App() {
                   <select
                     name=""
                     id=""
-                    className="w-56 border mt-1 text-sm px-2 py-1"
+                    className="md:w-56 w-full border mt-1 text-sm px-2 py-1"
                   >
                     <option value="">Pilih Karyawan</option>
                     <option value="">Budi Hermawan</option>
@@ -140,31 +140,31 @@ function App() {
                             </th>
                             <th
                               scope="col"
-                              className="px-6 py-3 border-r flex gap-2"
+                              className="md:px-6 px-3 py-0.5 md:py-3 whitespace-nowrap border-r"
                             >
                               Kode Barang
                             </th>
-                            <th scope="col" className="px-6 py-3 border-r">
+                            <th scope="col" className="md:px-6 px-3 py-0.5 md:py-3 whitespace-nowrap border-r">
                               Nama Barang
                             </th>
-                            <th scope="col" className="px-6 py-3 border-r">
+                            <th scope="col" className="md:px-6 px-3 py-0.5 md:py-3 whitespace-nowrap border-r">
                               Merk
                             </th>
-                            <th scope="col" className="px-6 py-3 border-r">
+                            <th scope="col" className="md:px-6 px-3 py-0.5 md:py-3 whitespace-nowrap border-r">
                               Jenis Barang
                             </th>
-                            <th scope="col" className="px-6 py-3 border-r">
+                            <th scope="col" className="md:px-6 px-3 py-0.5 md:py-3 whitespace-nowrap border-r">
                               Gudang
                             </th>
-                            <th scope="col" className="px-6 py-3">
+                            <th scope="col" className="md:px-6 px-3 py-0.5 md:py-3 whitespace-nowrap">
                               Total Stock (pcs)
                             </th>
-                            <th scope="col" className="px-6 py-3"></th>
+                            <th scope="col" className="md:px-6 px-3 py-0.5 md:py-3 whitespace-nowrap"></th>
                           </tr>
                         </thead>
                         <tbody className="text-xs">
                           {dataBarang.map((barang, index) => (
-                            <React.Fragment key={barang.kode_barang}>
+                            <React.Fragment key={index}>
                               <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                 <td className="px-3 py-2.5">
                                   <input
@@ -174,9 +174,8 @@ function App() {
                                     className="h-4 w-4 cursor-pointer"
                                   />
                                 </td>
-                                <th
-                                  scope="row"
-                                  className="px-6 py-2.5 font-medium text-gray-900 flex items-center gap-2 whitespace-nowrap dark:text-white"
+                                <td
+                                  className="md:px-6 md:py-2.5 py-0.5 px-3 font-medium text-gray-900 flex items-center gap-2 whitespace-nowrap dark:text-white"
                                 >
                                   <button
                                     onClick={() => toggleRowExpansion(index)}
@@ -195,26 +194,26 @@ function App() {
                                     )}
                                     {barang.kode_barang}
                                   </button>
-                                </th>
-                                <td className="px-6 py-2.5">
+                                </td>
+                                <td className="md:px-6 px-3 py-0.5 whitespace-nowrap md:py-2.5">
                                   {barang.nama_barang}
                                 </td>
-                                <td className="px-6 py-2.5">{barang.merk}</td>
-                                <td className="px-6 py-2.5">
+                                <td className="md:px-6 px-3 py-0.5 whitespace-nowrap md:py-2.5">{barang.merk}</td>
+                                <td className="md:px-6 px-3 py-0.5 whitespace-nowrap md:py-2.5">
                                   {barang.jenis_barang}
                                 </td>
-                                <td className="px-6 py-2.5">{barang.gudang}</td>
-                                <td className="px-6 py-2.5">
+                                <td className="md:px-6 px-3 py-0.5 whitespace-nowrap md:py-2.5">{barang.gudang}</td>
+                                <td className="md:px-6 px-3 py-0.5 whitespace-nowrap md:py-2.5">
                                   {barang.total_stok}
                                 </td>
-                                <td className="px-6 py-2.5">
+                                <td className="md:px-6 px-3 py-0.5 whitespace-nowrap md:py-2.5">
                                   <button
                                     onClick={() =>
                                       openModalAddLocation(barang.id)
                                     }
-                                    className="border border-orange-500 px-3 py-0.5 text-orange-500"
+                                    className="border whitespace-nowrap flex border-red-500 px-3 py-0.5 text-orange-500"
                                   >
-                                    + Lokasi
+                                  + Lokasi
                                   </button>
                                 </td>
                               </tr>
@@ -288,12 +287,6 @@ function App() {
                                                       </td>
                                                     </tr>
                                                   </tbody>
-                                                  // <li
-                                                  //   key={idx}
-                                                  //   className="text-sm text-gray-600"
-                                                  // >
-                                                  //   {lokasi.namaLokasi}
-                                                  // </li>
                                                 )
                                               )}
                                             </table>
