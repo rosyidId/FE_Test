@@ -64,7 +64,6 @@ function App() {
       }
       return barang;
     });
-  
     setDataBarang(updatedDataBarang); 
   };
   
@@ -265,7 +264,7 @@ function App() {
                                                       <input type="number" name="" id="" className="border w-20 h-6 px-1"/>
                                                       </td>
                                                       <td className="px-2 py-1">
-                                                        <select name="" id="" className="h-6">
+                                                        <select name="" id="" className="h-6 border">
                                                           <option value="">
                                                             Pilih Satuan
                                                           </option>
@@ -281,7 +280,7 @@ function App() {
                                                         {lokasi.volume}
                                                       </td>
                                                       <td className="px-2 py-1 flex justify-center items-center">
-                                                        <button onClick={() => handleDeleteLocation(barang.id, index)} className="">
+                                                        <button onClick={() => handleDeleteLocation(barang.id, idx)} className="">
                                                         <IconTrash className="text-red-500 " size={20}/>
                                                         </button>
                                                       </td>
